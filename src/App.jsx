@@ -1,6 +1,26 @@
 import { useMemo, useState } from "react";
+import { LuFiles } from "react-icons/lu";
+import { IoIosSearch } from "react-icons/io";
+import { VscDebugAltSmall } from "react-icons/vsc";
+import { VscExtensions } from "react-icons/vsc";
+import { VscSourceControl } from "react-icons/vsc";
+import { VscFile } from "react-icons/vsc";
+import { FaUserCircle } from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
+import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
-const activityIcons = ["▦", "⌕", "⑂", "◫", "⚙"];
+const activityIconsTop = [
+  { id: "explorer", Icon: LuFiles, label: "Explorer" },
+  { id: "search", Icon: IoIosSearch, label: "Search" },
+  { id: "sourceControl", Icon: VscSourceControl, label: "Source Control" },
+  { id: "runDebug", Icon: VscDebugAltSmall, label: "Run and Debug" },
+  { id: "extensions", Icon: VscExtensions, label: "Extensions" },
+];
+
+const activityIconsBottom = [
+  { id: "account", Icon: FaUserCircle, label: "Account" },
+  { id: "settings", Icon: IoMdSettings, label: "Settings" },
+];
 
 const tabs = [
   { id: "about", file: "about.jsx" },
@@ -9,6 +29,19 @@ const tabs = [
   { id: "skills", file: "skills.jsx" },
   { id: "learning", file: "learning-teaching.jsx" },
 ];
+
+const explorerFiles = [
+  { name: "about.jsx", badge: "JS", kind: "js", tabId: "about" },
+  { name: "experience.jsx", badge: "JS", kind: "js", tabId: "experience" },
+  { name: "projects.jsx", badge: "JS", kind: "js", tabId: "projects" },
+  { name: "skills.jsx", badge: "JS", kind: "js", tabId: "skills" },
+  { name: "learning-teaching.jsx", badge: "JS", kind: "js", tabId: "learning" },
+  { name: "styles.css", badge: "CSS", kind: "css" },
+  { name: "index.html", badge: "HTML", kind: "html" },
+  { name: "README.md", kind: "md" },
+];
+
+const windowMenuItems = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", "Help"];
 
 const techStack = ["React", "Next.js", "Node.js", "Tailwind", "MongoDB", "TypeScript"];
 
@@ -147,132 +180,114 @@ const experiences = [
 
 function AboutPage() {
   return (
-    <>
-      <div className="about-expanded-layout">
-        <main className="about-expanded">
-          <section className="code-intro">
+    <div className="about-vscode">
+      <section className="about-code-block">
+        <div className="about-path-row">
+          <p>
+            src <span>&gt;</span> pages <span>&gt;</span> about.jsx
+          </p>
+          <button className="about-properties-btn">Properties</button>
+        </div>
+
+        <div className="about-code-grid" aria-label="about.jsx code preview">
+          <div className="about-code-line">
+            <span className="about-line-no">1</span>
             <p>
               <span className="code-pink">import</span> React <span className="code-pink">from</span>{" "}
-              <span className="code-green">"react"</span>;
+              <span className="code-green">'react'</span>;
             </p>
-            <p>
-              <span className="code-pink">const</span> developer = {"{"}
-            </p>
-            <p>
-              &nbsp;&nbsp;name: <span className="code-green">"Paresh Suthar"</span>,
-            </p>
-            <p>
-              &nbsp;&nbsp;role: <span className="code-green">"MERN Stack Developer"</span>,
-            </p>
-            <p>
-              &nbsp;&nbsp;status: <span className="code-green">"Open to Work"</span>
-            </p>
-            <p>{"};"}</p>
-          </section>
-
-          <article className="profile-top-card">
-            <div className="profile-top-content">
-              <p className="mini-title">ABOUT ME</p>
-              <p className="profile-role">MERN Stack Developer</p>
-              <h1>Paresh Suthar</h1>
-              <p className="profile-location">Ahmedabad, India</p>
-              <span className="availability-pill">Available for Work</span>
-            </div>
-            <div className="profile-avatar-wrap">
-              <div className="profile-avatar-ring">
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=480&q=80"
-                  alt="Paresh Suthar avatar"
-                  className="profile-avatar"
-                />
-              </div>
-            </div>
-          </article>
-
-          <article className="bio-card">
-            <h2>Developer Bio</h2>
-            <p>
-              I am a product-focused full-stack developer with strong experience across React, Node.js,
-              and MongoDB ecosystems. I build clean interfaces, reliable APIs, and maintainable systems
-              that scale with business growth.
-            </p>
-
-            <div className="bio-section">
-              <h3>Tech Stack</h3>
-              <div className="stack-chips">
-                {techStack.map((item) => (
-                  <span key={item} className="stack-chip">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="social-row">
-              <button className="social-btn">Email Me</button>
-              <button className="social-btn">GitHub</button>
-              <button className="social-btn">LinkedIn</button>
-            </div>
-          </article>
-        </main>
-
-        <aside className="assistant-panel">
-          <div className="assistant-header">
-            <h2>Paresh AI Assistant</h2>
-            <span className="status-chip">Online</span>
           </div>
-          <div className="messages">
-            {assistantMessages.map((message, index) => (
-              <div key={message} className={`bubble ${index % 2 === 1 ? "assistant" : "user"}`}>
-                {message}
-              </div>
-            ))}
+          <div className="about-code-line">
+            <span className="about-line-no">2</span>
+            <p>&nbsp;</p>
           </div>
-        </aside>
-      </div>
-
-      <div className="mobile-about-view">
-        <article className="mobile-about-card">
-          <div className="mobile-avatar-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=480&q=80"
-              alt="Paresh Suthar avatar"
-              className="mobile-avatar"
-            />
-            <span className="mobile-online-dot" aria-hidden="true" />
-          </div>
-          <h2>Paresh Suthar</h2>
-          <p className="mobile-role">MERN Stack Developer</p>
-          <pre className="mobile-code-block">
-            <code>
-              <span className="code-key">const</span> <span className="code-var">developer</span>{" "}
+          <div className="about-code-line">
+            <span className="about-line-no">3</span>
+            <p>
+              <span className="code-pink">const</span> <span className="code-var">developer</span>{" "}
               <span className="code-op">=</span> {"{"}
-              {"\n"}  <span className="code-prop">name</span>: <span className="code-string">"Paresh"</span>,
-              {"\n"}  <span className="code-prop">tools</span>: [<span className="code-string">"React"</span>,{" "}
-              <span className="code-string">"Node"</span>, <span className="code-string">"MongoDB"</span>],
-              {"\n"}  <span className="code-prop">status</span>:{" "}
-              <span className="code-string">"Available"</span>
-              {"\n"}
-              {"}"}
-            </code>
-          </pre>
-          <p className="mobile-bio">
-            I build polished full-stack products with thoughtful UX, clean architecture, and
-            performance-first implementation.
-          </p>
-          <div className="mobile-chip-row">
-            {techStack.map((item) => (
-              <span key={item} className="stack-chip">
-                {item}
-              </span>
-            ))}
+            </p>
           </div>
+          <div className="about-code-line">
+            <span className="about-line-no">4</span>
+            <p>
+              &nbsp;&nbsp;<span className="code-prop">name</span>:{" "}
+              <span className="code-string">'Paresh Suthar'</span>,
+            </p>
+          </div>
+          <div className="about-code-line">
+            <span className="about-line-no">5</span>
+            <p>
+              &nbsp;&nbsp;<span className="code-prop">role</span>:{" "}
+              <span className="code-string">'MERN Stack Developer'</span>,
+            </p>
+          </div>
+          <div className="about-code-line">
+            <span className="about-line-no">6</span>
+            <p>
+              &nbsp;&nbsp;<span className="code-prop">location</span>:{" "}
+              <span className="code-string">'Surat, India'</span>,
+            </p>
+          </div>
+          <div className="about-code-line">
+            <span className="about-line-no">7</span>
+            <p>
+              &nbsp;&nbsp;<span className="code-prop">status</span>: <span className="code-string">'Open to work'</span>,
+            </p>
+          </div>
+          <div className="about-code-line">
+            <span className="about-line-no">8</span>
+            <p>{"};"}</p>
+          </div>
+        </div>
+      </section>
+
+      <article className="about-hero-card">
+        <p className="about-kicker">ABOUT ME</p>
+        <div className="about-hero-inner">
+          <div className="about-avatar-column">
+            <div className="about-avatar-ring">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=480&q=80"
+                alt="Paresh Suthar avatar"
+                className="about-hero-avatar"
+              />
+            </div>
+            <span className="about-mern-tag">* MERN</span>
+          </div>
+          <div className="about-hero-content">
+            <h1>
+              Paresh
+              <br />
+              Suthar
+            </h1>
+            <p>
+              Crafting robust web applications with the MERN stack. I transform complex problems
+              into elegant, scalable code. Passionate about clean architecture and modern UI/UX.
+            </p>
+            <div className="about-cta-row">
+              <button className="about-cta primary">Download CV</button>
+              <button className="about-cta secondary">Contact Me</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <section className="about-metrics">
+        <article className="about-metric-card">
+          <h3>3+</h3>
+          <p>YEARS EXP</p>
         </article>
-        <button className="mobile-fab" aria-label="Open assistant">
-          ?
-        </button>
-      </div>
-    </>
+        <article className="about-metric-card">
+          <h3>20+</h3>
+          <p>PROJECTS</p>
+        </article>
+        <article className="about-metric-card">
+          <h3>100%</h3>
+          <p>SATISFACTION</p>
+        </article>
+      </section>
+    </div>
   );
 }
 
@@ -425,6 +440,15 @@ function LearningPage() {
 
 function App() {
   const [activeTab, setActiveTab] = useState("about");
+  const [openTabIds, setOpenTabIds] = useState(() => tabs.map((tab) => tab.id));
+  const [activeActivity, setActiveActivity] = useState("explorer");
+  const [activeExplorerFile, setActiveExplorerFile] = useState("about.jsx");
+  const [theme, setTheme] = useState("dark");
+  const [openSections, setOpenSections] = useState({
+    root: true,
+    npm: false,
+    timeline: false,
+  });
   const [selectedProject, setSelectedProject] = useState(null);
 
   const statusLine = useMemo(() => {
@@ -451,35 +475,167 @@ function App() {
     return <AboutPage />;
   };
 
+  const handleExplorerFileClick = (item) => {
+    setActiveExplorerFile(item.name);
+    if (item.tabId) {
+      setOpenTabIds((previous) => (previous.includes(item.tabId) ? previous : [...previous, item.tabId]));
+      setActiveTab(item.tabId);
+    }
+  };
+
+  const handleCloseTab = (tabId) => {
+    setOpenTabIds((previous) => {
+      if (!previous.includes(tabId) || previous.length === 1) return previous;
+      const next = previous.filter((id) => id !== tabId);
+      if (activeTab === tabId) {
+        const closedIndex = previous.indexOf(tabId);
+        const fallbackTab = next[Math.min(closedIndex, next.length - 1)] || next[0];
+        setActiveTab(fallbackTab || "about");
+      }
+      return next;
+    });
+  };
+
+  const toggleSection = (sectionName) => {
+    setOpenSections((previous) => ({
+      ...previous,
+      [sectionName]: !previous[sectionName],
+    }));
+  };
+
+  const isLightTheme = theme === "light";
+  const openTabs = tabs.filter((tab) => openTabIds.includes(tab.id));
+
   return (
-    <div className="app-bg">
+    <div className={`app-bg ${isLightTheme ? "light-theme" : ""}`}>
       <div className="ide-shell">
         <header className="window-bar">
-          <div className="window-dots">
-            <span className="dot red" />
-            <span className="dot yellow" />
-            <span className="dot green" />
-          </div>
-          <p className="window-title">portfolio — Visual Studio Code</p>
+          <nav className="window-menu" aria-label="App menu">
+            {windowMenuItems.map((item) => (
+              <span key={item} className="window-menu-item">
+                {item}
+              </span>
+            ))}
+          </nav>
+          <p className="window-title">Paresh Suthar - Visual Studio Code</p>
+          <div className="window-bar-right" aria-hidden="true" />
         </header>
 
         <div className="ide-body">
           <aside className="activity-bar">
-            {activityIcons.map((icon, index) => (
-              <button key={icon + index} className="activity-icon" aria-label="activity item">
-                {icon}
+            {activityIconsTop.map(({ id, Icon, label }) => (
+              <button
+                key={id}
+                className={`activity-icon ${activeActivity === id ? "active" : ""}`}
+                aria-label={label}
+                onClick={() => setActiveActivity(id)}
+              >
+                <Icon />
               </button>
             ))}
+            <div className="activity-bar-bottom">
+              {activityIconsBottom.map(({ id, Icon, label }) => (
+                <button
+                  key={id}
+                  className={`activity-icon ${activeActivity === id ? "active" : ""}`}
+                  aria-label={label}
+                  onClick={() => setActiveActivity(id)}
+                >
+                  <Icon />
+                </button>
+              ))}
+              <button
+                className="activity-icon theme-toggle-btn"
+                aria-label={isLightTheme ? "Switch to dark theme" : "Switch to light theme"}
+                onClick={() => setTheme((previous) => (previous === "dark" ? "light" : "dark"))}
+              >
+                {isLightTheme ? <IoMoonOutline /> : <IoSunnyOutline />}
+              </button>
+            </div>
           </aside>
 
           <aside className="explorer">
-            <p className="explorer-title">EXPLORER</p>
-            <p className="explorer-folder">PORTFOLIO</p>
-            <ul className="file-list">
-              {tabs.map((tab) => (
-                <li
+            {activeActivity === "explorer" ? (
+              <>
+                <div className="explorer-header">
+                  <p className="explorer-title">EXPLORER</p>
+                  <button className="explorer-more" aria-label="More explorer actions">
+                    ...
+                  </button>
+                </div>
+
+                <div className={`explorer-section ${openSections.root ? "open" : ""}`}>
+                  <button
+                    className="section-toggle"
+                    aria-label="Toggle PARESHSUTHAR.DEV"
+                    aria-expanded={openSections.root}
+                    onClick={() => toggleSection("root")}
+                  >
+                    <span className="section-caret">{openSections.root ? "v" : ">"}</span>
+                    <span>PARESHSUTHAR.DEV</span>
+                  </button>
+                  {openSections.root && (
+                    <ul className="file-list">
+                      {explorerFiles.map((item) => (
+                        <li key={item.name}>
+                          <button
+                            className={`file-item ${activeExplorerFile === item.name ? "active" : ""}`}
+                            onClick={() => handleExplorerFileClick(item)}
+                          >
+                            {item.kind === "md" ? (
+                              <span className="file-badge md-icon" aria-hidden="true">
+                                <VscFile />
+                              </span>
+                            ) : (
+                              <span className={`file-badge ${item.kind}`}>{item.badge}</span>
+                            )}
+                            <span className="file-name">{item.name}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+
+                <div className={`explorer-section ${openSections.npm ? "open" : ""}`}>
+                  <button
+                    className="section-toggle"
+                    aria-label="Toggle NPM scripts"
+                    aria-expanded={openSections.npm}
+                    onClick={() => toggleSection("npm")}
+                  >
+                    <span className="section-caret">{openSections.npm ? "v" : ">"}</span>
+                    <span>NPM SCRIPTS</span>
+                  </button>
+                  {openSections.npm && <div className="section-content-empty" />}
+                </div>
+
+                <div className={`explorer-section ${openSections.timeline ? "open" : ""}`}>
+                  <button
+                    className="section-toggle"
+                    aria-label="Toggle timeline"
+                    aria-expanded={openSections.timeline}
+                    onClick={() => toggleSection("timeline")}
+                  >
+                    <span className="section-caret">{openSections.timeline ? "v" : ">"}</span>
+                    <span>TIMELINE</span>
+                  </button>
+                  {openSections.timeline && <div className="section-content-empty" />}
+                </div>
+              </>
+            ) : (
+              <div className="explorer-placeholder">
+                <p className="explorer-title">{activeActivity.toUpperCase()}</p>
+              </div>
+            )}
+          </aside>
+
+          <section className="editor">
+            <nav className="tabs">
+              {openTabs.map((tab) => (
+                <div
                   key={tab.id}
-                  className={`file-item ${activeTab === tab.id ? "active" : ""}`}
+                  className={`tab ${activeTab === tab.id ? "active" : ""}`}
                   onClick={() => setActiveTab(tab.id)}
                   role="button"
                   tabIndex={0}
@@ -487,23 +643,20 @@ function App() {
                     if (event.key === "Enter" || event.key === " ") setActiveTab(tab.id);
                   }}
                 >
-                  <span className="file-dot" />
-                  {tab.file}
-                </li>
-              ))}
-            </ul>
-          </aside>
-
-          <section className="editor">
-            <nav className="tabs">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  className={`tab ${activeTab === tab.id ? "active" : ""}`}
-                  onClick={() => setActiveTab(tab.id)}
-                >
-                  {tab.file}
-                </button>
+                  <span className="tab-badge">JS</span>
+                  <span className="tab-label">{tab.file}</span>
+                  <button
+                    type="button"
+                    className={`tab-close ${activeTab === tab.id ? "visible" : ""}`}
+                    aria-label={`Close ${tab.file}`}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      handleCloseTab(tab.id);
+                    }}
+                  >
+                    ×
+                  </button>
+                </div>
               ))}
             </nav>
 
@@ -544,3 +697,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
