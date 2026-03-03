@@ -92,56 +92,126 @@ const skillSections = [
 
 const projects = [
   {
-    title: "Ecommerce Platform",
-    description: "Scalable storefront with secure checkout, admin analytics, and dynamic catalog filtering.",
+    title: "ECommercePlatform",
+    description:
+      "Full-stack MERN application with Redux state management, Stripe payment gateway integration, and real-time inventory tracking.",
+    commentLines: [
+      "Full-stack MERN",
+      "application with Redux",
+      "state management, Stripe",
+      "payment gateway",
+      "integration, and real-time",
+      "inventory tracking.",
+    ],
     image:
       "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1400&q=80",
-    chips: ["React", "Node.js", "MongoDB", "Stripe"],
+    chips: ["React", "Node"],
     details:
-      "Implemented role-based dashboards, payment lifecycle hooks, and performance tuning for product discovery.",
+      "Implemented role-based dashboards, secure payment workflows, and real-time inventory monitoring with scalable state management.",
+    dotColors: ["#f3c323", "#3d8dff"],
   },
   {
-    title: "Realtime Chat",
-    description: "Socket-based team communication with channels, moderation controls, and presence updates.",
+    title: "RealTimeChat",
+    description:
+      "A socket.io based chat application supporting private rooms, media sharing, and read receipts. Features a mobile-first responsive design.",
+    commentLines: [
+      "A socket.io based chat",
+      "application supporting",
+      "private rooms, media",
+      "sharing, and read",
+      "receipts. Features a",
+      "mobile-first responsive",
+      "design.",
+    ],
     image:
       "https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1400&q=80",
-    chips: ["React", "Socket.IO", "Express", "Redis"],
-    details: "Built message persistence with read receipts and integrated media upload with optimized delivery.",
+    chips: ["Firebase", "Tailwind"],
+    details:
+      "Built a robust realtime architecture with private channels, notification states, and media delivery optimized for mobile and desktop.",
+    dotColors: ["#4a8cff", "#995eff"],
   },
   {
-    title: "TaskMaster Pro",
-    description: "Collaborative task board with deadlines, assignments, and progress summaries.",
+    title: "TaskMaster",
+    description:
+      "Productivity tool for developers. Kanban boards, time tracking, and Git integration. Uses Supabase for real-time data sync.",
+    commentLines: [
+      "Productivity tool for",
+      "developers. Kanban boards,",
+      "time tracking, and Git",
+      "integration. Uses Supabase",
+      "for real-time data sync.",
+    ],
     image:
       "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1400&q=80",
-    chips: ["React", "Node.js", "MongoDB", "Tailwind"],
-    details: "Added kanban drag-drop interactions, recurring tasks, and export-ready reporting pipelines.",
+    chips: ["Vue", "Supabase"],
+    details:
+      "Delivered workflow automation with drag-drop kanban interactions, sprint timelines, and realtime collaboration sync.",
+    dotColors: ["#2edd87", "#f0c525"],
   },
   {
-    title: "Learning Hub LMS",
-    description: "Course platform featuring lesson tracking, assessment flows, and instructor metrics.",
+    title: "NFTMarket",
+    description:
+      "Web3 marketplace prototype with wallet authentication, collection listings, and secure on-chain metadata retrieval.",
+    commentLines: [
+      "Web3 marketplace prototype",
+      "with wallet auth, curated",
+      "collection listings, and",
+      "secure metadata retrieval.",
+    ],
     image:
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1400&q=80",
-    chips: ["Next.js", "Prisma", "PostgreSQL", "Docker"],
-    details: "Designed modular content schemas and delivered streaming-ready video pages with engagement tracking.",
+    chips: ["Web3", "React"],
+    details:
+      "Built wallet-connect onboarding, metadata indexers, and interaction flows designed for fast trading and collection discovery.",
+    dotColors: ["#39a3ff", "#7b58ff"],
+  },
+  {
+    title: "SocialGrid",
+    description:
+      "Social app concept with post composer, live reactions, and feed ranking powered by lightweight GraphQL queries.",
+    commentLines: [
+      "Social app with live feed",
+      "updates, creator profiles,",
+      "and ranking powered by",
+      "lean GraphQL queries.",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80",
+    chips: ["Next.js", "GraphQL"],
+    details:
+      "Implemented timeline ranking, optimistic updates, and modular APIs for creator posts and community interactions.",
+    dotColors: ["#48a7ff", "#db7bff"],
   },
 ];
 
 const learningItems = [
-  { title: "Advanced Next.js", tag: "SSR / RSC", progress: 78 },
-  { title: "Three.js Experiences", tag: "Canvas", progress: 61 },
-  { title: "AI Product Integrations", tag: "LLM", progress: 72 },
+  { title: "Advanced Next.js", tag: "SSR/RSC", progress: 85, focus: "Mastering Server Actions", icon: "[]", accent: "#448aff" },
+  { title: "3D WebGL (Three.js)", tag: "Canvas", progress: 60, focus: "Shaders & Physics", icon: "<>", accent: "#a565f8" },
+  { title: "AI Integrations", tag: "LLM", progress: 40, focus: "Agents & Embeddings", icon: "AI", accent: "#2ed47a" },
 ];
 
 const teachingCards = [
   {
-    title: "PHP Playlist",
+    title: "MERN Stack Basics: From Scratch",
     src: "https://www.youtube.com/embed/videoseries?si=vA5DuKB_1VMKlquS&list=PLHyFeSflLq6aZmT6G4emoemU7SNUkBVM8",
-    meta: "Playlist - Created by Paresh",
+    meta: "Featured Video",
+    description: "Complete walkthrough of building a full-stack application using MongoDB, Express, React, and Node.js.",
+    thumbnail:
+      "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?auto=format&fit=crop&w=1280&q=80",
+    duration: "12:45",
+    views: "12K views",
+    likes: "450 likes",
   },
   {
-    title: "JavaScript Playlist",
+    title: "Redux Toolkit Guide 2024",
     src: "https://www.youtube.com/embed/videoseries?si=tnzCalbTqYdiOOIc&list=PLHyFeSflLq6Z8XidX56rMqC1RDcBkngMO",
-    meta: "Playlist - Created by Paresh",
+    meta: "Featured Video",
+    description: "State management does not have to be hard. Learn the modern way to handle state in React.",
+    thumbnail:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1280&q=80",
+    duration: "08:20",
+    views: "8.5K views",
+    likes: "320 likes",
   },
   {
     title: "jQuery Playlist",
@@ -176,8 +246,8 @@ const experiences = [
     company: "TechCorp Inc.",
     range: "2022 - Present",
     bullets: [
-      "Led developer productivity dashboard used by 5+ teams.",
-      "Optimized backend performance by 40% using query indexing.",
+      "Lead developer for enterprise dashboard used by 50k+ users.",
+      "Optimised React performance by 40% using memoization.",
       "Architected microservices using Node.js and Docker.",
     ],
     tags: ["React", "Node.js", "AWS"],
@@ -188,18 +258,18 @@ const experiences = [
     range: "2020 - 2022",
     bullets: [
       "Built scalable REST APIs using Express.js.",
-      "Integrated Stripe payment gateway securely.",
+      "Integrated Stripe payment gateways securely.",
       "Mentored 2 junior developers on MERN stack.",
     ],
     tags: ["Express", "MongoDB"],
   },
   {
     role: "Frontend Developer",
-    company: "WebCrafters Agency",
+    company: "WebCreative Agency",
     range: "2019 - 2020",
     bullets: [
       "Developed pixel-perfect responsive UI components.",
-      "Collaborated with UX team in Figma to launch features.",
+      "Collaborated with UX team on Figma to code handoff.",
     ],
     tags: ["React", "Tailwind"],
   },
@@ -937,36 +1007,79 @@ function AboutChatbot() {
 }
 
 function SkillsPage() {
+  const lineNumbers = Array.from({ length: 30 }, (_, index) => index + 1);
+  const sectionCodeMap = {
+    "Frontend Development": { open: "export const FRONTEND_STACK = [", close: "];" },
+    "Backend & Database": { open: "const SERVER_SIDE = {", close: "};" },
+    "Tools & Environment": { open: "async function loadTools() {", close: "}" },
+  };
+
   return (
-    <div className="skills-page">
-      <header className="code-head">
-        <p>// Frontend, backend and tools I work with daily</p>
+    <div className="skills-page-v2">
+      <header className="skills-code-head">
+        <div className="skills-path-row">
+          <p>
+            src <span>&gt;</span> components <span>&gt;</span> skills.jsx
+          </p>
+          <span className="skills-path-meta">Ln 14, Col 42</span>
+        </div>
       </header>
-      {skillSections.map((section) => (
-        <section key={section.title} className="skill-section">
-          <h2>{section.title}</h2>
-          <div className="skill-grid">
-            {section.items.map((skill) => (
-              <article key={skill.name} className="skill-tile">
-                <span className="skill-icon">{skill.icon}</span>
-                <div>
-                  <h3>{skill.name}</h3>
-                  <p>{skill.sub}</p>
-                </div>
-              </article>
-            ))}
+
+      <div className="skills-editor-shell">
+        <ol className="skills-line-numbers" aria-hidden="true">
+          {lineNumbers.map((lineNo) => (
+            <li key={lineNo}>{lineNo}</li>
+          ))}
+        </ol>
+
+        <div className="skills-editor-content">
+          <div className="skills-import-lines">
+            <p>
+              <span className="code-pink">import</span> <span className="code-op">{"{"}</span>{" "}
+              <span className="code-var">motion</span> <span className="code-op">{"}"}</span>{" "}
+              <span className="code-pink">from</span> <span className="code-green">&quot;framer-motion&quot;</span>;
+            </p>
+            <p>
+              <span className="code-pink">import</span> <span className="code-op">{"{"}</span>{" "}
+              <span className="code-var">SkillCard</span> <span className="code-op">{"}"}</span>{" "}
+              <span className="code-pink">from</span> <span className="code-green">&quot;./components/SkillCard&quot;</span>;
+            </p>
           </div>
-        </section>
-      ))}
-      <button className="skills-fab" aria-label="Open quick action">
-        +
-      </button>
+
+          {skillSections.map((section) => {
+            const sectionCode = sectionCodeMap[section.title] || { open: "const SKILLS = [", close: "];" };
+            return (
+              <section key={section.title} className="skill-section-v2">
+                <div className="skill-section-title-row">
+                  <h2>{`// ${section.title}`}</h2>
+                </div>
+
+                <p className="skill-section-code">{sectionCode.open}</p>
+
+                <div className="skill-grid-v2">
+                  {section.items.map((skill) => (
+                    <article key={skill.name} className="skill-tile-v2">
+                      <span className="skill-icon-v2">{skill.icon}</span>
+                      <div className="skill-meta-v2">
+                        <h3>{`"${skill.name}"`}</h3>
+                        <p>{skill.sub}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+
+                <p className="skill-section-code skill-section-code-close">{sectionCode.close}</p>
+              </section>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
 
 function ProjectsPage({ onSelectProject }) {
-  const projectGridLineNumbers = Array.from({ length: 28 }, (_, index) => index + 8);
+  const projectGridLineNumbers = Array.from({ length: 8 }, (_, index) => index + 8);
 
   return (
     <div className="projects-page-v2">
@@ -1000,6 +1113,30 @@ function ProjectsPage({ onSelectProject }) {
             <span className="projects-code-no">4</span>
             <p className="projects-code-note">// Explore my latest work below</p>
           </div>
+          <div className="projects-code-line">
+            <span className="projects-code-no">5</span>
+            <p>
+              <span className="code-pink">const</span> <span className="code-var">Projects</span>{" "}
+              <span className="code-op">=</span> <span className="code-op">()</span>{" "}
+              <span className="code-op">=&gt;</span> <span className="code-op">(</span>
+            </p>
+          </div>
+          <div className="projects-code-line">
+            <span className="projects-code-no">6</span>
+            <p>
+              <span className="code-pink">return</span> <span className="code-op">(</span>
+            </p>
+          </div>
+          <div className="projects-code-line">
+            <span className="projects-code-no">7</span>
+            <p>
+              <span className="code-op">&lt;</span>
+              <span className="code-var">Container</span> <span className="code-prop">className</span>
+              <span className="code-op">=</span>
+              <span className="code-green">&quot;grid-layout&quot;</span>
+              <span className="code-op">&gt;</span>
+            </p>
+          </div>
         </div>
       </header>
       <div className="projects-grid-shell">
@@ -1022,17 +1159,21 @@ function ProjectsPage({ onSelectProject }) {
                 </div>
               </div>
               <div className="project-body">
-                <h3>{`<${project.title.replace(/[^a-zA-Z0-9]/g, "")} />`}</h3>
+                <h3>{`<${project.title} />`}</h3>
                 <p className="project-comment">
-                  {`/*\n* ${project.description}\n* ${project.details}\n*/`}
+                  {`/**\n* ${project.commentLines.join(" ")}\n*/`}
                 </p>
                 <div className="project-card-foot">
-                  <span className="project-foot-link">&lt;&gt; Source</span>
-                  <span className="project-foot-link">[] Demo</span>
+                  <span className="project-foot-link">
+                    <span className="project-foot-icon">&lt;&gt;</span> Source
+                  </span>
+                  <span className="project-foot-link">
+                    <span className="project-foot-icon">↗</span> Demo
+                  </span>
                   <div className="project-mini-dots">
-                    <span className="mini-dot cyan" />
-                    <span className="mini-dot purple" />
-                    <span className="mini-dot green" />
+                    {project.dotColors.map((dotColor, index) => (
+                      <span key={`${project.title}-dot-${index}`} className="mini-dot" style={{ backgroundColor: dotColor }} />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -1045,28 +1186,71 @@ function ProjectsPage({ onSelectProject }) {
 }
 
 function ExperiencePage() {
+  const renderBulletText = (point) => {
+    const emphasisToken = "40%";
+    if (!point.includes(emphasisToken)) return point;
+    const [before, after] = point.split(emphasisToken);
+    return (
+      <>
+        {before}
+        <span className="experience-emphasis">{emphasisToken}</span>
+        {after}
+      </>
+    );
+  };
+
   return (
-    <div className="experience-page">
-      <header className="code-head">
-        <p>const ExperienceTimeline = () =&gt; {"("}</p>
+    <div className="experience-page-v2">
+      <header className="experience-code-head">
+        <div className="experience-path-row">
+          <p>
+            src <span>&gt;</span> pages <span>&gt;</span> experience.jsx
+          </p>
+          <span className="experience-path-meta">Ln 42, Col 15</span>
+        </div>
+        <div className="experience-code-grid" aria-label="experience.jsx code preview">
+          <div className="experience-code-line">
+            <span className="experience-code-no">1</span>
+            <p>
+              <span className="code-pink">const</span> <span className="code-var">ExperienceTimeline</span>{" "}
+              <span className="code-op">=</span> <span className="code-op">()</span> <span className="code-op">=&gt;</span>{" "}
+              <span className="code-op">{"{"}</span>
+            </p>
+          </div>
+          <div className="experience-code-line">
+            <span className="experience-code-no">2</span>
+            <p className="experience-code-note">// Rendering professional journey...</p>
+          </div>
+          <div className="experience-code-line">
+            <span className="experience-code-no">3</span>
+            <p>
+              <span className="code-pink">return</span> <span className="code-op">(</span>
+            </p>
+          </div>
+        </div>
       </header>
-      <section className="experience-timeline">
+
+      <section className="experience-timeline-v2">
         {experiences.map((item) => (
-          <article key={item.role} className="experience-item">
-            <div className="timeline-node">
-              <span />
-            </div>
-            <div className="experience-card">
-              <div className="experience-top">
-                <h3>{item.role}</h3>
+          <article key={item.role} className="experience-item-v2">
+            <div className="experience-marker-col" />
+
+            <div className="experience-card-v2">
+              <div className="experience-top-v2">
+                <h3>
+                  {item.role}
+                </h3>
                 <time>{item.range}</time>
               </div>
-              <p className="experience-company">{item.company}</p>
-              <ul>
+
+              <p className="experience-company-v2">{item.company}</p>
+
+              <ul className="experience-points-v2">
                 {item.bullets.map((point) => (
-                  <li key={point}>{point}</li>
+                  <li key={point}>{renderBulletText(point)}</li>
                 ))}
               </ul>
+
               <div className="stack-chips">
                 {item.tags.map((tag) => (
                   <span key={tag} className="stack-chip">
@@ -1083,49 +1267,92 @@ function ExperiencePage() {
 }
 
 function LearningPage() {
-  return (
-    <div className="learning-page">
-      <section className="learning-column">
-        <h2>Currently Learning</h2>
-        <div className="learning-list">
-          {learningItems.map((item) => (
-            <article key={item.title} className="learning-card">
-              <div className="learning-top">
-                <h3>{item.title}</h3>
-                <span>{item.tag}</span>
-              </div>
-              <div className="progress-shell">
-                <div className="progress-fill" style={{ width: `${item.progress}%` }} />
-              </div>
-              <p>{item.progress}% complete</p>
-            </article>
-          ))}
-        </div>
-      </section>
+  const learningLineNumbers = Array.from({ length: 30 }, (_, index) => index + 1);
+  const learningTags = ["#typescript", "#performance", "#architecture"];
 
-      <section className="teaching-column">
-        <h2>Teaching / Sharing</h2>
-        <div className="teaching-list">
-          {teachingCards.map((video) => (
-            <article key={video.title} className="video-card">
-              <div className="video-embed">
-                <iframe
-                  src={video.src}
-                  title={video.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-              <div className="video-info">
-                <h3>{video.title}</h3>
-                <span>{video.meta}</span>
-              </div>
-            </article>
-          ))}
+  return (
+    <div className="learning-page-v2">
+      <header className="learning-code-head">
+        <div className="learning-path-row">
+          <p>
+            src <span>&gt;</span> pages <span>&gt;</span> learning-teaching.jsx
+          </p>
+          <span className="learning-path-meta">Ln 42, Col 18</span>
         </div>
-      </section>
+      </header>
+
+      <div className="learning-editor-shell">
+        <ol className="learning-line-numbers" aria-hidden="true">
+          {learningLineNumbers.map((lineNo) => (
+            <li key={lineNo}>{lineNo}</li>
+          ))}
+        </ol>
+
+        <div className="learning-main-grid">
+          <section className="learning-column-v2">
+            <h2>
+              <span>##</span> Currently Learning
+            </h2>
+            <p className="learning-intro-v2">
+              &gt; Deep diving into advanced topics to stay ahead of the curve. Exploring the bleeding edge of web tech.
+            </p>
+
+            <div className="learning-list-v2">
+              {learningItems.map((item) => (
+                <article key={item.title} className="learning-card-v2">
+                  <div className="learning-card-top-v2">
+                    <span className="learning-icon-v2">{item.icon}</span>
+                    <h3>{item.title}</h3>
+                    <span className="learning-tag-v2">{item.tag}</span>
+                  </div>
+                  <div className="learning-progress-shell-v2">
+                    <div className="learning-progress-fill-v2" style={{ width: `${item.progress}%`, background: item.accent }} />
+                  </div>
+                  <div className="learning-card-bottom-v2">
+                    <p>{item.focus}</p>
+                    <strong>{item.progress}%</strong>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="learning-topic-tags-v2">
+              {learningTags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+            </div>
+          </section>
+
+          <section className="teaching-column-v2">
+            <h2>
+              <span>##</span> Teaching / Sharing
+            </h2>
+            <p className="learning-intro-v2">
+              &gt; Sharing knowledge through tutorials and open source contributions. Check out my latest content.
+            </p>
+
+            <div className="teaching-list-v2">
+              {teachingCards.slice(0, 2).map((video) => (
+                <article key={video.title} className="teaching-card-v2">
+                  <div className="teaching-thumb-v2">
+                    <img src={video.thumbnail} alt={video.title} />
+                    <span className="teaching-duration-v2">{video.duration}</span>
+                  </div>
+                  <div className="teaching-info-v2">
+                    <h3>{video.title}</h3>
+                    <p>{video.description}</p>
+                    <div className="teaching-stats-v2">
+                      <span>{video.views}</span>
+                      <span>{video.likes}</span>
+                      <span className="teaching-play-v2">▶</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }
@@ -1286,7 +1513,7 @@ function SnakeGame({ playerName, highestEntry, onSaveScore, onBack }) {
   const [queuedDirection, setQueuedDirection] = useState({ x: 1, y: 0 });
   const [food, setFood] = useState(() => spawnSnakeFood(SNAKE_START));
   const [score, setScore] = useState(0);
-  const [status, setStatus] = useState("running");
+  const [status, setStatus] = useState("ready");
   const hasSavedScoreRef = useRef(false);
 
   useEffect(() => {
@@ -1355,6 +1582,10 @@ function SnakeGame({ playerName, highestEntry, onSaveScore, onBack }) {
     setStatus("running");
   };
 
+  const startGame = () => {
+    setStatus("running");
+  };
+
   const changeDirection = (nextDirection) => {
     setQueuedDirection((current) => (isOppositeDirection(current, nextDirection) ? current : nextDirection));
   };
@@ -1373,7 +1604,7 @@ function SnakeGame({ playerName, highestEntry, onSaveScore, onBack }) {
       <div className="snake-topbar compact">
         <p>{playerName}</p>
         <p>Score: {score}</p>
-        <p>High: {highestScore}</p>
+        <p>High: {highestEntry?.score ?? 0}</p>
         <button type="button" onClick={onBack}>
           Menu
         </button>
@@ -1395,6 +1626,21 @@ function SnakeGame({ playerName, highestEntry, onSaveScore, onBack }) {
           );
         })}
       </div>
+
+      {status === "ready" && (
+        <div className="snake-ready-popup">
+          <h4>Ready to Play</h4>
+          <p>Click Start Game to begin.</p>
+          <div className="snake-popup-actions">
+            <button type="button" onClick={startGame}>
+              Start Game
+            </button>
+            <button type="button" onClick={onBack}>
+              Back to Menu
+            </button>
+          </div>
+        </div>
+      )}
 
       {status === "gameover" && (
         <div className="snake-gameover-popup">
@@ -1573,6 +1819,12 @@ function App() {
   useEffect(() => {
     localStorage.setItem(STORAGE_KEYS.openTabs, JSON.stringify(openTabIds));
   }, [openTabIds]);
+
+  useEffect(() => {
+    const matchedFile = explorerFiles.find((file) => file.tabId === activeTab);
+    if (!matchedFile) return;
+    setActiveExplorerFile(matchedFile.name);
+  }, [activeTab]);
 
   useEffect(() => {
     if (!selectedProject) return;
