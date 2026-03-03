@@ -1,0 +1,60 @@
+<svg width="540" height="296" viewBox="0 0 540 296" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="540" height="296" fill="#070B1A"/>
+  <g opacity="0.45" stroke="#10203E" stroke-width="2">
+    <path d="M0 0H540"/>
+    <path d="M0 42H540"/>
+    <path d="M0 84H540"/>
+    <path d="M0 126H540"/>
+    <path d="M0 168H540"/>
+    <path d="M0 210H540"/>
+    <path d="M0 252H540"/>
+    <path d="M0 294H540"/>
+    <path d="M0 0V296"/>
+    <path d="M42 0V296"/>
+    <path d="M84 0V296"/>
+    <path d="M126 0V296"/>
+    <path d="M168 0V296"/>
+    <path d="M210 0V296"/>
+    <path d="M252 0V296"/>
+    <path d="M294 0V296"/>
+    <path d="M336 0V296"/>
+    <path d="M378 0V296"/>
+    <path d="M420 0V296"/>
+    <path d="M462 0V296"/>
+    <path d="M504 0V296"/>
+  </g>
+
+  <g fill="#7BE358">
+    <rect x="70" y="53" width="34" height="34"/>
+    <rect x="112" y="53" width="34" height="34"/>
+    <rect x="154" y="53" width="34" height="34"/>
+    <rect x="196" y="53" width="34" height="34"/>
+    <rect x="238" y="53" width="34" height="34"/>
+    <rect x="280" y="53" width="34" height="34"/>
+    <rect x="322" y="53" width="34" height="34"/>
+    <rect x="364" y="53" width="34" height="34"/>
+
+    <rect x="70" y="95" width="34" height="34"/>
+    <rect x="364" y="95" width="34" height="34"/>
+
+    <rect x="70" y="137" width="34" height="34"/>
+    <rect x="112" y="137" width="34" height="34"/>
+    <rect x="154" y="137" width="34" height="34"/>
+    <rect x="196" y="137" width="34" height="34"/>
+    <rect x="238" y="137" width="34" height="34"/>
+
+    <rect x="238" y="179" width="34" height="34"/>
+    <rect x="238" y="221" width="34" height="34"/>
+
+    <rect x="0" y="221" width="34" height="34"/>
+    <rect x="42" y="221" width="34" height="34"/>
+    <rect x="84" y="221" width="34" height="34"/>
+    <rect x="126" y="221" width="34" height="34"/>
+    <rect x="168" y="221" width="34" height="34"/>
+    <rect x="210" y="221" width="34" height="34"/>
+  </g>
+
+  <rect x="405" y="220" width="38" height="38" fill="#FF3E3E"/>
+
+  <text x="316" y="206" fill="#D6EE6E" font-family="Courier New, monospace" font-size="56" font-weight="700" letter-spacing="8">SNAKE</text>
+</svg>
