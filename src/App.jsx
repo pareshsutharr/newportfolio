@@ -127,19 +127,39 @@ const learningItems = [
 
 const teachingCards = [
   {
-    title: "Build Better REST APIs with Node.js",
-    description: "Designing robust route layers, validation strategies, and production error handling.",
-    meta: "24K views • 1.2K likes",
+    title: "PHP Playlist",
+    src: "https://www.youtube.com/embed/videoseries?si=vA5DuKB_1VMKlquS&list=PLHyFeSflLq6aZmT6G4emoemU7SNUkBVM8",
+    meta: "Playlist • Created by Paresh",
   },
   {
-    title: "React Performance Patterns in Real Projects",
-    description: "Memoization, render optimization, and list virtualization in dashboard apps.",
-    meta: "18K views • 920 likes",
+    title: "JavaScript Playlist",
+    src: "https://www.youtube.com/embed/videoseries?si=tnzCalbTqYdiOOIc&list=PLHyFeSflLq6Z8XidX56rMqC1RDcBkngMO",
+    meta: "Playlist • Created by Paresh",
   },
   {
-    title: "MongoDB Data Modeling for SaaS Teams",
-    description: "Schema patterns, indexing plans, and query diagnostics for growing products.",
-    meta: "13K views • 740 likes",
+    title: "jQuery Playlist",
+    src: "https://www.youtube.com/embed/videoseries?si=gG4tv6KtYGpQ99OW&list=PLHyFeSflLq6Yt_8g9v03LddZDx_7duF8P",
+    meta: "Playlist • Created by Paresh",
+  },
+  {
+    title: "Java Playlist",
+    src: "https://www.youtube.com/embed/videoseries?si=wd3EGb6r5S5jnsnx&list=PLHyFeSflLq6ZEkK9g1KCGDh_BM8rAcedK",
+    meta: "Playlist • Created by Paresh",
+  },
+  {
+    title: "JSON Video",
+    src: "https://www.youtube.com/embed/vS_hGh9sJKc?si=croa2ZGNILqd08DN",
+    meta: "Single Video • Created by Paresh",
+  },
+  {
+    title: "AJAX Video",
+    src: "https://www.youtube.com/embed/4YBE_ElEW_c?si=EVUjVKKkNuUWrJ08",
+    meta: "Single Video • Created by Paresh",
+  },
+  {
+    title: "HTML CSS Full Video",
+    src: "https://www.youtube.com/embed/D-abUJUGcpA?si=ktg2f0VovH74Qk_m",
+    meta: "Single Video • Created by Paresh",
   },
 ];
 
@@ -424,10 +444,18 @@ function LearningPage() {
         <div className="teaching-list">
           {teachingCards.map((video) => (
             <article key={video.title} className="video-card">
-              <div className="video-thumb" />
+              <div className="video-embed">
+                <iframe
+                  src={video.src}
+                  title={video.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
               <div className="video-info">
                 <h3>{video.title}</h3>
-                <p>{video.description}</p>
                 <span>{video.meta}</span>
               </div>
             </article>
@@ -697,7 +725,6 @@ function App() {
 }
 
 export default App;
-
 
 
 

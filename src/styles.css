@@ -3,27 +3,36 @@
   color: #e6e8ff;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100%;
   background: radial-gradient(circle at top right, #2a245b 0%, #0c0f1b 45%, #080a12 100%);
   color: #e6e8ff;
+  overflow: hidden;
 }
 
 .app-bg {
-  min-height: 100vh;
+  height: 100vh;
   /* padding: 18px; */
   background-image: radial-gradient(rgba(128, 135, 255, 0.18) 1px, transparent 1px);
   background-size: 22px 22px;
+  overflow: hidden;
 }
 
 .ide-shell {
   max-width: 2000px;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 0;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
@@ -294,8 +303,10 @@ body {
 
 .editor {
   min-width: 0;
+  min-height: 0;
   display: grid;
   grid-template-rows: 48px 1fr;
+  overflow: hidden;
 }
 
 .tabs {
@@ -379,6 +390,7 @@ body {
 .editor-content {
   min-width: 0;
   min-height: 0;
+  height: 100%;
   overflow: auto;
   padding: 14px;
 }
@@ -1590,8 +1602,7 @@ body {
   background: rgba(19, 26, 44, 0.88);
   padding: 10px;
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 10px;
+  gap: 8px;
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
@@ -1601,10 +1612,17 @@ body {
   box-shadow: 0 10px 20px rgba(95, 73, 194, 0.24);
 }
 
-.video-thumb {
+.video-embed {
   border-radius: 8px;
-  background: linear-gradient(140deg, #1e2842, #25385e);
+  overflow: hidden;
   border: 1px solid rgba(169, 178, 255, 0.26);
+}
+
+.video-embed iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
 }
 
 .video-info h3 {
@@ -2148,4 +2166,3 @@ body {
 .app-bg.light-theme .code-string {
   color: #b26b00;
 }
-
